@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Chat Assistant</h1>
+            <p>Powered by Google Gemini</p>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div class="chat-history" id="chatHistory">
+                    <div class="welcome-message">
+                        <p>Welcome! Start a conversation by typing a message below.</p>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Type your message here..." 
+                        rows="3"
+                    ></textarea>
+                    <button id="sendButton" class="send-btn">
+                        <span>Send</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="clearHistory" class="control-btn">Clear History</button>
+                <button id="exportHistory" class="control-btn">Export Chat</button>
+            </div>
+        </main>
+        
+        <div class="loading" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>AI is thinking...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
